@@ -15,3 +15,11 @@ C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed
 Using selector: SelectSelector
 2020-06-08 12:26:47,050 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2020-06-08 12:26:54,484 RedisLog.views ERROR    Test!!
+2020-06-08 12:37:15,408 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 12:37:15,409 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 12:37:16,566 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 12:37:25,070 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 12:37:25,070 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 12:41:21,715 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 12:44:05,527 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 12:44:37,111 django.utils.autoreload INFO     Watching for file changes with StatReloader
