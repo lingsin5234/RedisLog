@@ -23,3 +23,140 @@ Using selector: SelectSelector
 2020-06-08 12:41:21,715 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2020-06-08 12:44:05,527 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2020-06-08 12:44:37,111 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:00:07,875 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:00:07,876 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:00:09,141 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:47:50,007 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-08 13:47:50,008 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:47:51,193 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:48:25,995 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:48:25,996 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:48:27,185 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:48:29,732 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:48:29,733 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:48:30,930 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:49:36,865 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:49:36,865 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:49:38,074 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:50:50,995 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:50:51,464 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 585, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Program Files\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 16, in index
+    timer_queue.delay()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\decorators.py", line 66, in delay
+    meta=self.meta, description=self.description, failure_ttl=self.failure_ttl)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 68, in enqueue_call
+    return self.original_enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 64, in original_enqueue_call
+    return super(DjangoRQ, self).enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 331, in enqueue_call
+    job = self.enqueue_job(job, at_front=at_front)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 439, in enqueue_job
+    pipe.execute()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\client.py", line 4013, in execute
+    self.shard_hint)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to localhost:6379:1. getaddrinfo failed.
+2020-06-08 13:50:51,464 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 585, in _connect
+    socket.SOCK_STREAM):
+  File "C:\Program Files\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 16, in index
+    timer_queue.delay()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\decorators.py", line 66, in delay
+    meta=self.meta, description=self.description, failure_ttl=self.failure_ttl)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 68, in enqueue_call
+    return self.original_enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 64, in original_enqueue_call
+    return super(DjangoRQ, self).enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 331, in enqueue_call
+    job = self.enqueue_job(job, at_front=at_front)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 439, in enqueue_job
+    pipe.execute()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\client.py", line 4013, in execute
+    self.shard_hint)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 11001 connecting to localhost:6379:1. getaddrinfo failed.
+2020-06-08 13:51:44,919 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:52:54,495 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:52:54,496 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:52:55,674 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:52:56,426 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:54:09,156 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:54:09,157 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:54:10,391 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:54:11,362 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:54:26,174 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:54:26,174 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:54:27,353 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:55:53,935 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:55:53,936 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:55:55,116 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:56:00,058 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:56:00,059 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:56:01,211 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:56:27,671 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 13:56:27,671 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:56:28,867 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 13:56:33,590 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 13:59:56,089 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 14:01:43,634 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 14:01:43,635 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 14:01:44,880 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 14:01:47,570 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 14:01:49,581 rq.worker    INFO     Worker rq:worker:7f1ff667337341619be6bfe0b67c20f8: started, version 1.4.2
+2020-06-08 14:01:49,581 rq.worker    INFO     *** Listening on default...
+2020-06-08 14:01:49,582 rq.worker    INFO     Cleaning registries for queue: default
+2020-06-08 14:02:01,752 rq.worker    INFO     default: RedisLog.tasks.timer_queue() (7d7914dd-9fbf-4fdc-afca-bbc2ad087164)
+2020-06-08 14:02:01,755 rq.worker    ERROR    Worker rq:worker:7f1ff667337341619be6bfe0b67c20f8: found an unhandled exception, quitting...
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\worker.py", line 519, in work
+    self.execute_job(job, queue)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\worker.py", line 740, in execute_job
+    self.fork_work_horse(job, queue)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\worker.py", line 667, in fork_work_horse
+    child_pid = os.fork()
+AttributeError: module 'os' has no attribute 'fork'
+2020-06-08 15:15:02,632 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 16:06:03,098 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 16:09:19,459 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-08 16:09:19,459 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-08 16:09:20,681 django.utils.autoreload INFO     Watching for file changes with StatReloader
