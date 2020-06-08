@@ -1,0 +1,17 @@
+Watching for file changes with StatReloader
+Test!!
+Not Found: /escape
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Test!!
+C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+Using selector: SelectSelector
+Watching for file changes with StatReloader
+Test!!
+C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+Using selector: SelectSelector
+Watching for file changes with StatReloader
+C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+Using selector: SelectSelector
+2020-06-08 12:26:47,050 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-08 12:26:54,484 RedisLog.views ERROR    Test!!
