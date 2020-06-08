@@ -1,0 +1,9 @@
+# exclude .idea and pycache files
+**/.idea
+**/.idea/*
+**/__pycache__
+**/__pycache__/*
+**/static/admin
+**/static/admin/*
+*.sqlite3
+*.db
