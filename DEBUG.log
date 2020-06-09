@@ -160,3 +160,5 @@ AttributeError: module 'os' has no attribute 'fork'
 2020-06-08 16:09:19,459 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
 2020-06-08 16:09:19,459 asyncio      DEBUG    Using selector: SelectSelector
 2020-06-08 16:09:20,681 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-09 11:10:32,003 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-09 11:11:02,335 asyncio      DEBUG    Using selector: SelectSelector
