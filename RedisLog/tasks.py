@@ -29,5 +29,5 @@ def azure_OCR(container_name, image_name):
         data = b
 
     # send request to Azure OCR
-    result = req.post(post_url, json=data, headers=headers)
+    result = req.post(post_url, data=data, headers=headers)
     print(json.dumps(result.text, indent=4))
