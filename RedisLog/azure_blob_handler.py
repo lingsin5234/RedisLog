@@ -103,6 +103,7 @@ def blob_downloader(container_name, image_name):
         #  ---------  Local Directory Setup  ---------  #
         local_path = "RedisLog/data"
         download_file_path = os.path.join(local_path, image_name)
+        print("Download File Path:", download_file_path)
 
         #  --------- Connection String Setup ---------  #
         connect_str = os.environ.get('AZURE_STORAGE_CONNECTION_STRING')
