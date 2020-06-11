@@ -5,7 +5,7 @@
 
     {% load crispy_forms_tags %}
     <div class="d-flex justify-content-center">
-        <form id="submit_request" action="" method="post" data-submit-url="{% url 'ocr-submit-request'">
+        <form id="submit_request" action="{% url 'ocr-submit-request' %}" method="post">
             {% csrf_token %}
             <input type="submit" value="Send Request">
         </form>

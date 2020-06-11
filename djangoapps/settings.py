@@ -161,7 +161,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'DEBUG.log',
+            'filename': 'DEBUG.LOG',
             'formatter': 'file'
         },
         'rq_console': {
@@ -189,7 +189,7 @@ LOGGING = {
 
 # DJANGO-RQ
 CACHES = {
-    'default': {
+    'redis-cache': {
         'BACKEND': 'redis_cache.cache.RedisCache',
         'LOCATION': '127.0.0.1:6379:1',
         'OPTIONS': {
@@ -201,6 +201,13 @@ CACHES = {
 
 RQ_QUEUES = {
     'default': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'DB': 0,
+        'PASSWORD': 'redispassword',
+        'DEFAULT_TIMEOUT': 360,
+    },
+    'azure': {
         'HOST': 'localhost',
         'PORT': 6379,
         'DB': 0,
