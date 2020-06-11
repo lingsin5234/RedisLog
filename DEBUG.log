@@ -404,3 +404,13 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'ajax_load_teams' not found. 
 2020-06-11 11:06:18,673 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
 2020-06-11 11:06:18,673 asyncio      DEBUG    Using selector: SelectSelector
 2020-06-11 11:06:19,774 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 11:13:39,297 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 11:13:39,297 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:13:40,333 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 11:14:15,512 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 11:14:15,512 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:14:16,519 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 11:18:30,270 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:21:00,691 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\settings.py changed, reloading.
+2020-06-11 11:21:00,691 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:21:01,772 django.utils.autoreload INFO     Watching for file changes with StatReloader

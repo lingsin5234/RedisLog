@@ -24,4 +24,5 @@ urlpatterns = [
     path('django-rq/', include('django_rq.urls')),
     re_path(r'^redis-queue/', views.view_redis_queue),
     re_path(r'ajax/load-result/', views.load_result, name='ajax_load_result'),
+    re_path(r'^redis/ocr-submit-request/', views.submit_ocr_request, name='ocr-submit-request')
 ]
