@@ -2,8 +2,7 @@ from django_rq import job
 from .azure_blob_handler import blob_downloader
 import time as t
 import requests as req
-import json, io
-import PIL.Image as Image
+import json
 
 
 @job('azure')
@@ -22,11 +21,11 @@ def azure_OCR(container_name, image_name):
 
     # get container, download, convert image to raw binary
     downloaded_url = blob_downloader(container_name, image_name)
-    pil_im = Image.fromarray(downloaded_url)
-    b = io.BytesIO()
-    pil_im.save(b, 'jpeg')
-    data = b.getvalue()
-    print("Downloaded URL:", downloaded_url)
+    with open(downloaded_url, "rb") as image:
+        f = image.read()
+        b = bytearray(f)
+        print(b)
+        data = b[0]
 
     # send request to Azure OCR
     result = req.post(post_url, json=data, headers=headers)
