@@ -3,13 +3,13 @@ import time as t
 import requests as req
 
 
-@job
+@job('azure')
 def timer_queue():
     t.sleep(60)  # sleep 60 seconds
 
 
 # image Azure OCR queue
-@job
+@job('azure')
 def azure_OCR():
 
     # send the image to azure

@@ -37,7 +37,7 @@ def view_redis_queue(request):
 def submit_ocr_request(request):
 
     # run the azure OCR task
-    timer_queue.delay('azure')
+    timer_queue.delay()
 
     return HttpResponseRedirect("/redis-queue")
 
