@@ -21,8 +21,13 @@ def index(request):
 # redis queue
 def view_redis_queue(request):
 
-    context = {
+    if request.method == 'POST':
+        a_msg = 'POST Requested'
+    else:
+        a_msg = ''
 
+    context = {
+        'message': a_msg
     }
 
     return render(request, 'pages/redis_queue.html', context)
@@ -32,7 +37,7 @@ def view_redis_queue(request):
 def load_result(request):
 
     context = {
-
+        'results': ['result']
     }
 
     return render(request, 'partials/redis_queue_update.html', context)

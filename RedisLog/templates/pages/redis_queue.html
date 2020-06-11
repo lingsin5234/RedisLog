@@ -4,21 +4,57 @@
     </div><br>
 
     {% load crispy_forms_tags %}
-    <!--form id="view_stats" action="" method="post" data-teams-url="url 'ajax_load_teams'" novalidate>
-        {% csrf_token %}
-        <input type="submit" value="View Stats">
-    </form-->
+    <div class="d-flex justify-content-center">
+        <form id="submit_request" action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Send Request">
+        </form>
+    </div><br>
+
+    <div class="d-flex justify-content-center">
+        <p>{{ message }}</p>
+    </div><br>
+
+    <div class="d-flex justify-content-center">
+        <p id="timer"></p>
+    </div><br>
+
+    <div id="results" class="d-flex justify-content-center"></div><br>
 
     <script>
         (function () {
-            window.results = {{results|safe}};
+            window.load_url = '{% url 'ajax_load_result' %}';
         }());
+        console.log(load_url);
     </script>
     {% load static %}
     <!--script src="{% static 'scripts/baseball_view_stats.js' %}"></script-->
 
     <script>
     // 10 second timer
+    var timeLeft = 10;
+    var aTimer = setInterval(function(){
+
+        // every 10 seconds, run a ajax request
+        if(timeLeft == 0) {
+            $.ajax({
+                url: load_url,
+                //data: {},
+                success: function(data) {
+                    console.log(data);
+                    $("#results").html(data);  // replace with the values retrieved
+                }
+            });
+        }
+
+        if(timeLeft < 0){
+            timeLeft = 10;
+        }
+        document.getElementById("timer").textContent = 10 - timeLeft;
+        console.log(timeLeft);
+        timeLeft -= 1;
+    }, 1000);
+
     /*$("#id_year").change(function () {
         var url = $("#view_stats").attr("data-teams-url");  // get the url of the `load_teams` view
         var yearId = $(this).val();  // get selected YEAR

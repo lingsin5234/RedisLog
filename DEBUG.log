@@ -368,3 +368,39 @@ Traceback (most recent call last):
   File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'ajax_load_teams' not found. 'ajax_load_teams' is not a valid view function or pattern name.
+2020-06-11 10:40:57,349 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\urls.py changed, reloading.
+2020-06-11 10:40:57,349 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:40:58,379 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:41:51,473 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 10:41:51,474 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:41:52,740 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:42:42,177 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 10:42:42,177 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:42:43,238 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:43:21,957 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 10:43:21,957 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:43:22,988 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:46:32,226 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 10:46:32,226 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:46:33,310 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:47:32,797 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 10:47:32,797 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:47:33,845 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:47:47,265 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\urls.py changed, reloading.
+2020-06-11 10:47:47,265 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:47:48,360 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:58:21,208 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\djangoapps\urls.py changed, reloading.
+2020-06-11 10:58:21,208 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:58:22,309 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 11:03:17,796 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 11:03:17,796 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:03:18,862 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 11:03:26,451 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 11:03:26,451 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:03:27,488 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 11:03:35,083 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 11:03:35,083 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:03:36,149 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 11:06:18,673 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 11:06:18,673 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 11:06:19,774 django.utils.autoreload INFO     Watching for file changes with StatReloader
