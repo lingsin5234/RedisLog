@@ -162,3 +162,209 @@ AttributeError: module 'os' has no attribute 'fork'
 2020-06-08 16:09:20,681 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2020-06-09 11:10:32,003 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2020-06-09 11:11:02,335 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:33:57,019 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:34:05,794 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 16, in index
+    timer_queue.delay()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\decorators.py", line 66, in delay
+    meta=self.meta, description=self.description, failure_ttl=self.failure_ttl)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 68, in enqueue_call
+    return self.original_enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 64, in original_enqueue_call
+    return super(DjangoRQ, self).enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 331, in enqueue_call
+    job = self.enqueue_job(job, at_front=at_front)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 439, in enqueue_job
+    pipe.execute()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\client.py", line 4013, in execute
+    self.shard_hint)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.
+2020-06-11 10:34:05,794 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 559, in connect
+    sock = self._connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 615, in _connect
+    raise err
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 16, in index
+    timer_queue.delay()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\decorators.py", line 66, in delay
+    meta=self.meta, description=self.description, failure_ttl=self.failure_ttl)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 68, in enqueue_call
+    return self.original_enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django_rq\queues.py", line 64, in original_enqueue_call
+    return super(DjangoRQ, self).enqueue_call(*args, **kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 331, in enqueue_call
+    job = self.enqueue_job(job, at_front=at_front)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\rq\queue.py", line 439, in enqueue_job
+    pipe.execute()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\client.py", line 4013, in execute
+    self.shard_hint)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 1192, in get_connection
+    connection.connect()
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\redis\connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.
+2020-06-11 10:34:06,161 django.request WARNING  Not Found: /favicon.ico
+2020-06-11 10:34:06,161 django.request WARNING  Not Found: /favicon.ico
+2020-06-11 10:34:15,745 django.request ERROR    Internal Server Error: /redis-queue/
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 28, in view_redis_queue
+    return render(request, 'pages/redis_queue.html', context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ajax_load_teams' not found. 'ajax_load_teams' is not a valid view function or pattern name.
+2020-06-11 10:34:15,745 django.request ERROR    Internal Server Error: /redis-queue/
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 28, in view_redis_queue
+    return render(request, 'pages/redis_queue.html', context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ajax_load_teams' not found. 'ajax_load_teams' is not a valid view function or pattern name.
+2020-06-11 10:34:37,629 django.utils.autoreload INFO     C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py changed, reloading.
+2020-06-11 10:34:37,629 asyncio      DEBUG    Using selector: SelectSelector
+2020-06-11 10:34:38,755 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-06-11 10:34:39,328 django.request ERROR    Internal Server Error: /redis-queue/
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 28, in view_redis_queue
+    return render(request, 'pages/redis_queue.html', context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ajax_load_teams' not found. 'ajax_load_teams' is not a valid view function or pattern name.
+2020-06-11 10:34:39,328 django.request ERROR    Internal Server Error: /redis-queue/
+Traceback (most recent call last):
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Sinto\Documents\PycharmProjects\RedisLog\RedisLog\views.py", line 28, in view_redis_queue
+    return render(request, 'pages/redis_queue.html', context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\base.py", line 903, in render_annotated
+    return self.render(context)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\template\defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Users\Sinto\Documents\PycharmProjects\venv\lib\site-packages\django\urls\resolvers.py", line 677, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'ajax_load_teams' not found. 'ajax_load_teams' is not a valid view function or pattern name.

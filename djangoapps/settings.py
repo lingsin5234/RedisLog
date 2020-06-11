@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # libraries
+    'crispy_forms',
+    'menu',
     'django_rq',
 
     # apps

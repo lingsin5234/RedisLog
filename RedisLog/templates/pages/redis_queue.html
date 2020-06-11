@@ -1,0 +1,41 @@
+{% include 'partials/header_redis.html' %}
+    <div id="my_title" class="d-flex justify-content-center">
+        <h1>Redis Queue</h1>
+    </div><br>
+
+    {% load crispy_forms_tags %}
+    <!--form id="view_stats" action="" method="post" data-teams-url="url 'ajax_load_teams'" novalidate>
+        {% csrf_token %}
+        <input type="submit" value="View Stats">
+    </form-->
+
+    <script>
+        (function () {
+            window.results = {{results|safe}};
+        }());
+    </script>
+    {% load static %}
+    <!--script src="{% static 'scripts/baseball_view_stats.js' %}"></script-->
+
+    <script>
+    // 10 second timer
+    /*$("#id_year").change(function () {
+        var url = $("#view_stats").attr("data-teams-url");  // get the url of the `load_teams` view
+        var yearId = $(this).val();  // get selected YEAR
+        console.log(url);
+        // initialize an AJAX request
+        $.ajax({
+            //async: true,
+            url: url,  // set the url of the request (= localhost:8000/ajax/load-teams/)
+            data: {
+                'year': yearId  // add the year id to the GET parameters
+            },
+            success: function (data) {  // `data` is the return of the `load_teams` view function
+                console.log(data);
+                $("#id_team").html(data);  // replace with the values retrieved
+            }
+        });
+    });*/
+    </script><br>
+
+{% include 'partials/footer_redis.html' %}
