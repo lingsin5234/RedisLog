@@ -21,6 +21,7 @@ def azure_OCR(container_name, image_name):
 
     # get container, download, convert image to raw binary
     downloaded_url = blob_downloader(container_name, image_name)
+    print(downloaded_url)
     with open(downloaded_url, "rb") as image:
         f = image.read()
         b = bytearray(f)
