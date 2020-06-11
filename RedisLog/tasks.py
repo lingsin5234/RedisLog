@@ -1,6 +1,7 @@
 from django_rq import job
 import time as t
 import requests as req
+import json
 
 
 @job('azure')
@@ -17,6 +18,5 @@ def azure_OCR():
     post_url = 'https://canadacentral.api.cognitive.microsoft.com/vision/v3.0/ocr?language=unk&detectOrientation=true'
     headers = {'Content-Type': 'application/json', 'Ocp-Apim-Subscription-Key': azure_key}
     data = {"url":"https://portfolio.sinto-ling.ca/static/img/receipt-images/shoppers.jpg"}
-    result = req.post(post_url, data, headers=headers)
-    print(result)
-    print(result.text)
+    result = req.post(post_url, json=data, headers=headers)
+    print(json.dumps(result.text, indent=4))

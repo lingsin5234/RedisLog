@@ -3,6 +3,8 @@ import logging
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .tasks import timer_queue, azure_OCR
+import requests as req
+import json
 
 # This retrieves a Python logging instance (or creates it)
 logger = logging.getLogger(__name__)
@@ -37,7 +39,7 @@ def view_redis_queue(request):
 def submit_ocr_request(request):
 
     # run the azure OCR task
-    timer_queue.delay()
+    azure_OCR.delay()
 
     return HttpResponseRedirect("/redis-queue")
 
