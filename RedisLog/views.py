@@ -51,7 +51,7 @@ def submit_ocr_request(request):
     # store the image to azure blob
     # azure_blob = blob_handler_test(post_details)
     # container = azure_blob['container']
-    container = 'quickstart40d9fc30-c4a4-4bca-975f-6031844e0c98'
+    container = 'quickstart9227b22f-9bc5-4345-a396-c33a56f11d94'
     image_name = 'shoppers.jpg'
 
     # run the azure OCR task

@@ -22,6 +22,7 @@ def azure_OCR(container_name, image_name):
     # get container, download and use that downloaded file url
     downloaded_url = blob_downloader(container_name, image_name)
     data = {"url": downloaded_url}
+    print("Downloaded URL for Azure:", downloaded_url)
 
     # send request to Azure OCR
     result = req.post(post_url, json=data, headers=headers)
