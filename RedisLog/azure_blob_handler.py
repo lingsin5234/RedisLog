@@ -94,3 +94,45 @@ def blob_handler_test(post_details):
         }
 
     return output_dict
+
+
+# blob downloader
+def blob_downloader(container_name, image_name):
+
+    try:
+        #  ---------  Local Directory Setup  ---------  #
+        local_path = "RedisLog/data"
+        download_file_path = os.path.join(local_path, image_name)
+
+        #  --------- Connection String Setup ---------  #
+        connect_str = os.environ.get('AZURE_STORAGE_CONNECTION_STRING')
+        connect_str = connect_str.replace("'", '').replace('$', '')  # remove auto-created $ and '
+
+        #  --------- Create a container here ---------  #
+        # Create the BlobServiceClient object which will be used to load the container client
+        blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+
+        # Create a container client
+        container_client = blob_service_client.get_container_client(container=container_name)
+
+        #  --------- List blobs in container ---------  #
+        print("\nListing blobs...")
+
+        # List the blobs in the container
+        blob_list = container_client.list_blobs()
+        for blob in blob_list:
+            print("\t" + blob.name)
+            blob_client = blob_service_client.get_blob_client(container=container_name, blob=image_name)
+
+            #  ---------  Download uploaded blob ---------  #
+            # Download the blob to a local file
+            print("\nDownloading blob to \n\t" + download_file_path)
+
+            with open(download_file_path, "wb") as download_file:
+                download_file.write(blob_client.download_blob().readall())
+
+    except Exception as e:
+        download_file_path = ''
+        print(e)
+
+    return download_file_path

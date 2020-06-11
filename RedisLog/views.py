@@ -51,10 +51,11 @@ def submit_ocr_request(request):
     # store the image to azure blob
     # azure_blob = blob_handler_test(post_details)
     # container = azure_blob['container']
-    container = 'https://blobstorage005234.blob.core.windows.net/quickstartf307c613-1e65-4bb2-8e8a-4fd731cd0cdb'
+    container = 'quickstarte5b1aa42-2709-4b60-9d50-387da876c1c5'
+    image_name = 'quickstart2b55bcd9-e65c-4d79-92d8-f8a81dee3c5b.txt'
 
     # run the azure OCR task
-    azure_OCR.delay(container)
+    azure_OCR.delay(container, image_name)
 
     return HttpResponseRedirect("/redis-queue")
 
