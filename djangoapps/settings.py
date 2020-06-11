@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'menu',
     'django_rq',
+    'rest_framework',
 
     # apps
     'RedisLog'
