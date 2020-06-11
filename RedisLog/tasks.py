@@ -26,8 +26,7 @@ def azure_OCR(container_name, image_name):
     b = io.BytesIO()
     pil_im.save(b, 'jpeg')
     data = b.getvalue()
-
-    print("Downloaded URL for Azure:", data)
+    print("Downloaded URL:", downloaded_url)
 
     # send request to Azure OCR
     result = req.post(post_url, json=data, headers=headers)
