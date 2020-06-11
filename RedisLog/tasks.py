@@ -25,7 +25,7 @@ def azure_OCR(container_name, image_name):
     with open(downloaded_url, "rb") as image:
         f = image.read()
         b = bytearray(f)
-        print(b[0])
+        print(len(b))
         data = b[0]
 
     # send request to Azure OCR
