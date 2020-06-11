@@ -26,7 +26,7 @@ def azure_OCR(container_name, image_name):
         f = image.read()
         b = bytearray(f)
         print(len(b))
-        data = b[0]
+        data = b
 
     # send request to Azure OCR
     result = req.post(post_url, json=data, headers=headers)
