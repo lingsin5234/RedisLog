@@ -7,4 +7,4 @@
 **/static/admin/*
 *.sqlite3
 *.db
-DEBUG.log
+*.log
