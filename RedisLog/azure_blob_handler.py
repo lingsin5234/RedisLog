@@ -108,6 +108,7 @@ def blob_downloader(container_name, image_name):
         #  --------- Connection String Setup ---------  #
         connect_str = os.environ.get('AZURE_STORAGE_CONNECTION_STRING')
         connect_str = connect_str.replace("'", '').replace('$', '')  # remove auto-created $ and '
+        print("Connection String:", connect_str)
 
         #  --------- Create a container here ---------  #
         # Create the BlobServiceClient object which will be used to load the container client
