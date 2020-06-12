@@ -34,11 +34,11 @@ def azure_OCR(container_name, image_name):
     print(json.dumps(result.text, indent=4))
 
     # update database that this one is completed
-    query = 'UPDATE mnl_load_receipt SET processed_bool=1 WHERE container_name=? AND image_name=?'
+    query = 'UPDATE mnl_load_receipt SET processed_bool=? WHERE container_name=? AND image_name=?'
     c = ds.engine.connect()
-    c.execute(query, container_name, image_name)
+    c.execute(query, True, container_name, image_name)
 
-    query = 'SELECT * FROM mnl_load_receipt WHERE processed_bool=1'
-    results = c.execute(query).fetchall()
+    query = 'SELECT * FROM mnl_load_receipt WHERE processed_bool=?'
+    results = c.execute(query, True).fetchall()
     print(results)
     c.close()

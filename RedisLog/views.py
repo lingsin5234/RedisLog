@@ -51,9 +51,9 @@ def submit_ocr_request(request):
 
     #  ---  for testing only  ---  #
     # retrieve next available image
-    query = 'SELECT container_name, image_name FROM mnl_load_receipt WHERE processed_bool=0 ORDER BY timestamp LIMIT 1'
+    query = 'SELECT container_name, image_name FROM mnl_load_receipt WHERE processed_bool=? ORDER BY timestamp LIMIT 1'
     c = ds.engine.connect()
-    result = c.execute(query).fetchall()
+    result = c.execute(query, False).fetchall()
 
     #  --------------------------  #
 
