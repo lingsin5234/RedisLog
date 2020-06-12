@@ -1,5 +1,5 @@
 import logging
-
+import random as rdm
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .tasks import timer_queue, azure_OCR
@@ -51,20 +51,22 @@ def submit_ocr_request(request):
 
     #  ---  for testing only  ---  #
     # retrieve next available image
-    query = 'SELECT container_name, image_name FROM mnl_load_receipt WHERE processed_bool=? ORDER BY timestamp LIMIT 1'
+    query = 'SELECT container_name, image_name FROM mnl_load_receipt WHERE processed_bool=?'
     c = ds.engine.connect()
     result = c.execute(query, False).fetchall()
 
+    # choose random result
+    idx = rdm.randint(0, len(result))
     #  --------------------------  #
 
     # store the image to azure blob
     # azure_blob = blob_handler_test(post_details)
     # container = azure_blob['container']
-    container, image_name = result[0]
+    container, image_name = result[idx]
     print('INPUTS:', container, image_name)
 
     # run the azure OCR task
-    # azure_OCR.delay(container, image_name)
+    azure_OCR.delay(container, image_name)
 
     return HttpResponseRedirect("/redis-queue")
 
