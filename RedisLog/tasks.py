@@ -37,4 +37,8 @@ def azure_OCR(container_name, image_name):
     query = 'UPDATE mnl_load_receipt SET processed_bool=1 WHERE container_name=? AND image_name=?'
     c = ds.engine.connect()
     c.execute(query, container_name, image_name)
+
+    query = 'SELECT * FROM mnl_load_receipt WHERE processed_bool=1'
+    results = c.execute(query).fetchall()
+    print(results)
     c.close()
