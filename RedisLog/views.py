@@ -64,7 +64,7 @@ def submit_ocr_request(request):
     print('INPUTS:', container, image_name)
 
     # run the azure OCR task
-    azure_OCR.delay(container, image_name)
+    # azure_OCR.delay(container, image_name)
 
     return HttpResponseRedirect("/redis-queue")
 

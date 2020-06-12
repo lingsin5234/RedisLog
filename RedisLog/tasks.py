@@ -38,7 +38,11 @@ def azure_OCR(container_name, image_name):
     c = ds.engine.connect()
     c.execute(query, True, container_name, image_name)
 
+    # check that it has been processed
     query = 'SELECT * FROM mnl_load_receipt WHERE processed_bool=?'
     results = c.execute(query, True).fetchall()
     print(results)
     c.close()
+
+    # add a time delay for some latency
+    t.sleep()
