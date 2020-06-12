@@ -6,6 +6,5 @@
 **/static/admin
 **/static/admin/*
 *.sqlite3
-*.db
 *.log
 *.LOG

@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .tasks import timer_queue, azure_OCR
 from .azure_blob_handler import blob_handler_test
+from .oper import database_structure as ds
 import requests as req
 import json
 
@@ -48,11 +49,19 @@ def submit_ocr_request(request):
     }
     '''
 
+    #  ---  for testing only  ---  #
+    # retrieve next available image
+    query = 'SELECT container_name, image_name FROM mnl_load_receipt WHERE processed_bool=0 ORDER BY timestamp LIMIT 1'
+    c = ds.engine.connect()
+    result = c.execute(query).fetchall()
+
+    #  --------------------------  #
+
     # store the image to azure blob
     # azure_blob = blob_handler_test(post_details)
     # container = azure_blob['container']
-    container = 'quickstart9227b22f-9bc5-4345-a396-c33a56f11d94'
-    image_name = 'shoppers.jpg'
+    container, image_name = result[0]
+    print('INPUTS:', container, image_name)
 
     # run the azure OCR task
     azure_OCR.delay(container, image_name)

@@ -1,5 +1,6 @@
 from django_rq import job
 from .azure_blob_handler import blob_downloader
+from .oper import database_structure as ds
 import time as t
 import requests as req
 import json
@@ -31,3 +32,9 @@ def azure_OCR(container_name, image_name):
     # send request to Azure OCR
     result = req.post(post_url, data=data, headers=headers)
     print(json.dumps(result.text, indent=4))
+
+    # update database that this one is completed
+    query = 'UPDATE mnl_load_receipt SET processed_bool=1 WHERE container_name=? AND image_name=?'
+    c = ds.engine.connect()
+    c.execute(query, container_name, image_name)
+    c.close()
