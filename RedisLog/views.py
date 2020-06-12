@@ -56,7 +56,7 @@ def submit_ocr_request(request):
     result = c.execute(query, False).fetchall()
 
     # choose random result
-    idx = rdm.randint(0, len(result))
+    idx = rdm.randint(1, len(result)) - 1
     #  --------------------------  #
 
     # store the image to azure blob
