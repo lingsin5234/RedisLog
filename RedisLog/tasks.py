@@ -46,3 +46,4 @@ def azure_OCR(container_name, image_name):
 
     # add a time delay for some latency
     t.sleep(8)
+
