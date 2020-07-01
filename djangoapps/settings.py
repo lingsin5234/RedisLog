@@ -205,14 +205,14 @@ RQ_QUEUES = {
         'HOST': 'localhost',
         'PORT': 6379,
         'DB': 0,
-        'PASSWORD': 'redispassword',
+        'PASSWORD': os.environ.get('RQ_DEFAULT_PWD'),
         'DEFAULT_TIMEOUT': 360,
     },
     'azure': {
         'HOST': 'localhost',
         'PORT': 6379,
         'DB': 0,
-        'PASSWORD': 'redispassword',
+        'PASSWORD': os.environ.get('RQ_AZURE_PWD'),
         'DEFAULT_TIMEOUT': 360,
     },
 }
